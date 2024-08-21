@@ -142,7 +142,7 @@ class NodeModel extends Model
                         return true;
                     }
                 }
-                if (substr(Craft::$app->request->getPathInfo(), 0, strlen($this->slug . "/")) === $this->slug . "/") {
+                if (substr(Craft::$app->request->getPathInfo() . "/", 0, strlen($this->slug . "/")) === $this->slug . "/") {
                     return true;
                 }
                 break;
